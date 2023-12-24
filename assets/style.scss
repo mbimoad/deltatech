@@ -1,0 +1,555 @@
+@import 'mixin'; 
+$indents_parent: 60px; 
+$primary: #2aabe2; 
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    font: inherit; 
+    font-size: inherit;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {   
+    position: relative;
+    margin: auto; 
+    max-width: 1920px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+.header-bar {
+    position: fixed;
+    left:0; 
+    right: 0;
+    z-index: 10;
+    @include myflex(flex-end, center, unset, 20px); 
+    padding:10px $indents_parent;
+    height: 40px;
+    background: transparent;
+    li {
+        position: relative;
+        * {
+            color:$primary; 
+            text-decoration: none;
+        }
+    }
+    li:first-child::after {
+        @include myafter(white); 
+        @include mywidth(1px, 100%); 
+        @include myposition(0,-10px); 
+    }
+    .sitemap {
+        cursor: pointer;
+        @include myflex(); 
+        gap: 10px; 
+        .box {
+            right: -26px;
+            position: absolute;
+            background:$primary;
+            border-radius: 50%;
+            @include myflex(); 
+            @include mywidth(20px,20px); 
+            span {
+                margin-top: -2px;
+                color:white;
+            }
+            transition: all 500ms ease 0s;
+        }
+        .box.rotate {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+.menu-overlay.show {
+    top: 0;
+    opacity: 1;
+}
+
+.menu-overlay {
+    z-index: 5;
+    background:$primary;
+    position: fixed;
+    top: -9999%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+    @include mywidth(100%, 100vh);
+    .icon {
+        margin: 0px $indents_parent;
+        padding: 10px 0;
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color:white; 
+        }
+    } 
+    .icon::after {
+        @include myafter(white); 
+        width: 100%; 
+        height: 1px; 
+        left: 0;
+        transform: translateY(12px);
+    }
+    // Scroll Bar Hidden
+    &-all::-webkit-scrollbar { display: none;}
+    &-all {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+        overflow: auto;
+        margin: 20px $indents_parent;
+        height: 100vh;
+        .sub-menu {
+        
+            color:white; 
+            h1 {@include myfont(22px, bold);} 
+            .sub-link {
+                margin: 10px 0;
+                @include myflex(flex-start,flex-start,column,10px);
+                a {color:white;display:inline-block;}
+                a:hover{text-decoration: underline;}
+            } ul {
+                margin: 15px 0;
+                @include myflex(flex-start,flex-start,column,5px);
+                a {color:rgb(233, 233, 233);} 
+                a:hover{text-decoration: underline;}
+            }
+        }
+    }
+}
+
+.navbar {
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    top: 50px;
+
+    @include myflex(center, center, unset, 20px);
+    padding: 8px 0; 
+    img {width: 80px;}
+    * {color: $primary}
+    ul {
+        @include myflex(center, center, unset, 40px);
+        .arrow-menu {
+            position: relative;
+            .main-menu {
+                .title {@include myfont(20px, bold);}
+                .fa-sort-up   {display: none;}
+                .fa-sort-down {display: unset;}
+            }
+            .hiddenel1 {
+                position: absolute;
+                @include mywidth(180px, 30px);
+                background:transparent; 
+                bottom: -30px;
+                z-index: 2;
+                display: none;
+            }
+            .submenu1 {
+                z-index: 2;
+                top: 50px;
+                width: 180px; 
+                padding: 20px 10px;
+                position: absolute;
+                @include myflex(space-evenly,unset, column, 30px);
+                box-shadow: 0px 0px 4px 0 #eee;
+                background:white; 
+                display: none;
+                .sub-title {
+                    @include myfont(18px, unset);
+                    cursor: pointer;
+                } i {
+                    font-size: 12px;
+                    margin-bottom: -4px;
+                } .arrow-menu {
+                    .main-menu {@include myflex(space-between, center);}
+                    .hiddenel2 {
+                        position: absolute;
+                        width: 27px;
+                        height: 100px;
+                        background: transparent;
+                        top: -2px;
+                        right: -27px;
+                        z-index: 2;
+                        display: none;
+                    } .submenu2 {
+                        right: -200px;
+                        top: 0px;
+                        width: 180px; 
+                        padding: 20px 10px;
+                        position: absolute;
+                        @include myflex(space-evenly,unset, column, 30px);
+                        box-shadow: 0px 0px 4px 0 #eee;
+                        background:white; 
+                        display: none;
+                        .sub-title {
+                            @include myfont(18px, unset);
+                            cursor: pointer;
+                        } i {
+                            font-size: 12px;
+                            margin-bottom: -4px;
+                        } .arrow-menu {
+                            .main-menu {@include myflex(space-between, center);}
+                        }
+                    }
+                }
+            }
+        }
+
+        // Search Overlay
+        .fa-search {
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-overlay {
+            @include myposition(40px, 0, unset, 0); 
+            @include myflex(center,center,column, 20px);
+            position: absolute;
+            padding: 40px 0; 
+            background: white;
+            display: none;
+            strong {font-weight: bold;}
+            * {
+                color:black;
+            }
+            .close {
+                position: absolute;
+                @include myposition(40px, 95px, unset, unset); 
+                font-size: 25px;
+                cursor: pointer;
+            } h1 {
+                font-size: 25px;
+            } h3 {
+                font-size: 18px;
+            }.input-group {
+                position: relative;
+                .fa-search {
+                    position: absolute;
+                    top: 13px;
+                    left: 12px;
+                } input {
+                    padding: 10px 10px 10px 40px;
+                    border: 1px solid #ccc;
+                } input[type=text]:focus {
+                    border: 1px solid $primary;
+                    outline: none;
+                } 
+            }
+            .keywords {
+                @include myflex(unset, unset, unset, 10px); 
+                .keyword {
+                    padding: 10px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.main {
+    width:100%;
+    height:700px;
+    margin: 0 auto;
+    position: relative;
+    .container {
+
+        .learn-more:hover {
+            p {
+                transform: rotate(-90deg) translateX(70px);
+            }
+        }
+        .learn-more {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            bottom: 0; 
+            * {color:white;}
+            @include myflex(center,center,column,20px);
+            p {
+                transition: all 200ms ease 0s;
+                transform: rotate(-90deg) translateX(50px);
+                @include myfont(14px);
+                
+            }
+            .line {
+                height: 30px;
+                width: 2px; 
+                background:white; 
+            }
+        } .ruangberita {
+            cursor: pointer;
+            transition: all 200ms ease 0s;
+            border-radius: 4px;
+            position: absolute;
+            right: -115px;
+            background: #0a4f9d;
+            color:white; 
+            @include myflex(center, center, unset, 20px); 
+            padding: 10px 15px;
+            h4 {
+                @include myfont(18px, bold);
+            }
+        } .ruangberita:hover {
+            right: 0;
+        }
+        padding: 0 $indents_parent; 
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background:rgba(61, 61, 61, 0.404); 
+        @include myflex(center, unset, column, 30px);
+        .carousel-btn {
+            color:white; 
+            @include myflex(flex-start, center, unset, 12px);
+            i {cursor: pointer;}
+            z-index: 3;
+        }
+      
+        .detail {
+            z-index: 3;
+            width: 60%;
+            @include myflex(unset, unset, column, 40px);
+            h1 {
+                @include myfont(50px, bold);
+                color:white; 
+            } p {
+                @include myfont(19px, bold);
+                color:white; 
+            } a {
+                @include myfont(19px, bold);
+                color:white; 
+                display: inline-block;
+                padding: 20px 30px; 
+                border: 2px solid white;
+                border-radius:5px;
+                align-self: flex-start;
+            }
+        }
+    }
+    .slider-outer::before {
+        @include myafter(unset); 
+        width: 100%; 
+        height: 250px;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.822), rgba(255, 255, 255, 0.548), rgba(255, 255, 255, 0));
+    }
+    .slider-outer{
+        height:100% !important; 
+        overflow:hidden;
+        .slider{ 
+            width: 100%;
+            height: 100%;
+            .slide-item {
+                float:left;
+                padding: 0;
+                margin: 0;
+                video {
+                    min-width: 100%; min-height: 100vh;
+                }
+        
+                .slide-image{
+                    width: 100%;
+                    height: 100%;
+                    display:block;
+                    color: transparent;
+                    background-size: cover;
+                    -moz-background-size: cover;
+                    -ms-background-size: cover;
+                    -o-background-size: cover;
+                    -webkit-background-size: cover;
+                    background-position: 50% 50%;
+                    background-repeat: none;
+                }
+            }
+        }
+    }   
+}  
+
+.clear {
+    clear:both;
+}
+
+
+.whowe {
+    padding: 60px $indents_parent; 
+    .detail {
+        margin: auto;
+        width: 55%;
+        text-align: center;
+        h1 {
+            @include myfont(40px, bold); 
+            color:#0a4f9d;
+        } h5 {
+            margin: 20px 0; 
+            @include myfont(18px, unset); 
+        } a {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid $primary;
+            border-radius: 5px;
+            @include myfont(18px, unset); 
+            color:$primary;
+        }
+    }
+
+    &-cards {
+        margin-top: 50px;
+        @include myflex(space-evenly, center, unset);
+
+        .card {
+            border-radius: 8px;
+            padding: 10px 15px;
+            background: #0a4f9d; 
+            @include myflex(space-evenly,center, unset, 10px);
+            i {
+                font-size: 70px;
+                color:$primary; 
+            } &-detail {
+                color:white; 
+                h5 {
+                    @include myfont(20px, bold);
+                } h1 {
+                    @include myfont(30px, bold);
+                }
+            }
+        }
+    }
+}
+
+
+
+.services {
+    &-title {
+        position: absolute;
+        top: 70px;
+        margin: auto;
+        @include myfont(40px, unset);
+        color:white; 
+        z-index: 9;
+        pointer-events: none;
+        strong {font-weight: bold;}
+    }
+    position: relative;
+    background-image: url('../company/image/bg3.jpg');
+    background-size: cover;
+    height: 600px;
+    @include myflex(space-evenly,unset,unset);
+    .overlay {
+        position: absolute;
+        background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.397), black);
+        @include myposition(0,0,0,0);
+        pointer-events: none;
+    }
+    .service:hover {
+        background-color: #0a4f9dda;
+        .icon {
+            transform: translate(0, 0);
+        } .detail {
+            transform: translate(0, 0);
+            opacity: 1;
+
+        }
+    }
+    .service {
+        transition: all 500ms ease 0s;
+        border-right: 2px solid rgba(255, 255, 255, 0.637);
+        flex: 1; 
+        padding: 30px;
+        @include myflex(space-evenly,center, column);
+        text-align: center;
+        * {color:white;}
+        .icon {
+            transition: all 200ms ease 0s;
+            transform: translate(0, 100px);
+            i  {font-size: 60px;} 
+            h1 {@include myfont(30px, bold);}
+        } .detail {
+            transition: all 200ms ease 100ms;
+            transform: translate(0, 30px);
+            opacity: 0;
+            p {
+                -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                scrollbar-width: none;  /* Firefox */
+                margin-bottom: 15px;
+                height: 80px; 
+                overflow: auto
+            } 
+            p::-webkit-scrollbar { display: none;}
+
+            
+
+            a {
+                @include myfont(20px, bold);
+                padding: 5px 0;
+                border-bottom: 2px solid rgb(247, 247, 247);
+            }
+        }
+    } .service:last-child {
+        border-right: unset;
+    }
+}
+
+.projects {
+    margin-bottom: 300px;
+    padding: 30px $indents_parent;
+    @include myflex(unset, unset,unset, 30px); 
+    .layer1 {
+        @include myflex(center, unset, column, 20px); 
+        a {
+            border: 2px solid #0a4f9d;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            color: #333;
+        }
+    } .layer2 {
+        overflow-x: hidden;
+        overflow-y: unset;
+        width: 100%;
+        height: 380px;
+        @include myflex(unset, unset,unset, 30px); 
+        .project.cover {background-size: cover;}
+        .project {
+            flex: 0 0 360px;
+
+            height: 250px;
+            border-radius: 4px;
+            position: relative;
+            &-detail {
+                @include myflex(unset, flex-start,unset, 10px); 
+                position: absolute;
+                bottom: -40px;
+                padding: 10px 10px;
+                height: 80px;
+                background:#eee;
+                border-bottom: 2px solid #aaa;
+            } &-description {
+                background:#eee;
+                width: 80%;
+                position: absolute;
+                bottom: -120px;
+                right: 0;
+                padding: 10px;
+                h2 {
+                    @include myfont(20px, bold);
+                    margin-bottom: 5px;
+                } p {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

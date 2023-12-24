@@ -1,0 +1,31 @@
+@mixin myflex($justify: center, $align: center, $direction:unset, $gap: unset) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap; 
+    
+}
+
+@mixin mywidth($xwidth, $xheight) {
+    width: $xwidth; 
+    height: $xheight; 
+}
+@mixin myafter($bg) {
+    content: '';
+    display: block;
+    position: absolute;
+    background: $bg; 
+}
+
+@mixin myposition($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    top: $top; 
+    right: $right; 
+    bottom: $bottom; 
+    left: $left; 
+}
+
+@mixin myfont($size: unset, $tipe: unset) {
+    font-size: $size; 
+    font-weight: $tipe; 
+}
