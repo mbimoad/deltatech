@@ -1,0 +1,39 @@
+footer {
+    margin-top: 50px;
+    background:#0a4f9d;
+    
+    * {
+        color: white; 
+    }
+    .footer-menus {
+        padding: 20px $indents_parent; 
+        @include myflex(space-between, center, unset); 
+        .footer-menu {
+            @include myflex(space-between, center, unset); 
+            a {
+                padding: 0 20px;
+            } a:first-child, a:nth-child(2) {
+                border-right: 1px solid white;
+            }
+        }
+    }
+    .icon-addr::before {
+        @include myafter(white); 
+        @include myposition(-25px, 0,unset,0);
+        height: 1px;
+    }
+    .icon-addr {
+        padding: 0 $indents_parent 20px; 
+        position: relative;
+        margin-top: 40px;
+        @include myflex(space-between, center, unset); 
+        .addr {
+            @include myflex(space-between, flex-start, unset, 15px); 
+        } .icon i {
+            font-size: 30px;
+        } .icon {
+            @include myflex(space-evenly, center, unset, 10px);
+        }
+
+    }
+}

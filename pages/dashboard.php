@@ -89,18 +89,16 @@
     </div>
 </section>
 
-
-
 <section class="projects">
     <div class="layer1">
-        <a href=""#><i class="fas fa-chevron-right"></i></a>
-        <a href=""#><i class="fas fa-chevron-left"></i></a>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
     </div>
-    <div class="layer2">
-        <div class="project cover" style="background-image:url('company/image/cardimg1.jpg')">
+    <div class="layer2 carousel">
+        <div class="project cover box" style="background-image:url('company/image/cardimg1.jpg')">
             <div class="project-detail">
                 <i class="fas fa-archway"></i>
-                <p>Infrastructure</p>
+                <p>Infrastructure 1</p>
             </div>
 
             <div class="project-description">
@@ -108,10 +106,10 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex amet rerum veritatis, ut architecto blanditiis!</p>
             </div>
         </div>
-        <div class="project cover" style="background-image:url('company/image/cardimg1.jpg')">
+        <div class="project cover box" style="background-image:url('company/image/cardimg1.jpg')">
             <div class="project-detail">
                 <i class="fas fa-archway"></i>
-                <p>Infrastructure</p>
+                <p>Infrastructure 2</p>
             </div>
 
             <div class="project-description">
@@ -119,10 +117,10 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex amet rerum veritatis, ut architecto blanditiis!</p>
             </div>
         </div>
-        <div class="project cover" style="background-image:url('company/image/cardimg1.jpg')">
+        <div class="project cover box" style="background-image:url('company/image/cardimg1.jpg')">
             <div class="project-detail">
                 <i class="fas fa-archway"></i>
-                <p>Infrastructure</p>
+                <p>Infrastructure 3</p>
             </div>
 
             <div class="project-description">
@@ -130,10 +128,10 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex amet rerum veritatis, ut architecto blanditiis!</p>
             </div>
         </div>
-        <div class="project cover" style="background-image:url('company/image/cardimg1.jpg')">
+        <div class="project cover box" style="background-image:url('company/image/cardimg1.jpg')">
             <div class="project-detail">
                 <i class="fas fa-archway"></i>
-                <p>Infrastructure</p>
+                <p>Infrastructure 4</p>
             </div>
 
             <div class="project-description">
@@ -141,6 +139,68 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex amet rerum veritatis, ut architecto blanditiis!</p>
             </div>
         </div>
+       
         
+    </div>
+</section>
+
+
+<section class="latest-news">
+    <h1><strong>Informasi</strong> Terkini</h1>
+
+    <div class="list-menu">
+        <button class="active" type="button">Berita</button>
+        <button type="button">Siaran Pers</button>
+        <button type="button">Majalah Elektronik</button>
+    </div>
+
+    <div class="news">
+        <div class="box">
+            <div class="image cover" style="background-image:url('company/image/bg4.jpg')"></div>
+            <div class="info">
+                <p>November 30, 2023</p>
+                <strong>PENGUMUMAN PENGADAAN LEMBAGA/PROFESI PENUNJANG DALAM RANGKA PENERBITAN HAK MEMESAN EFEK TERLEBIH DAHULU MELALUI PENAWARAN UMUM PT WIJAYA KARYA (Persero) Tbk</strong>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image cover" style="background-image:url('company/image/bg4.jpg')"></div>
+            <div class="info">
+                <p>November 30, 2023</p>
+                <strong>PENGUMUMAN PENGADAAN LEMBAGA/PROFESI PENUNJANG DALAM RANGKA PENERBITAN HAK MEMESAN EFEK TERLEBIH DAHULU MELALUI PENAWARAN UMUM PT WIJAYA KARYA (Persero) Tbk</strong>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image cover" style="background-image:url('company/image/bg4.jpg')"></div>
+            <div class="info">
+                <p>November 30, 2023</p>
+                <strong>PENGUMUMAN PENGADAAN LEMBAGA/PROFESI PENUNJANG DALAM RANGKA PENERBITAN HAK MEMESAN EFEK TERLEBIH DAHULU MELALUI PENAWARAN UMUM PT WIJAYA KARYA (Persero) Tbk</strong>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="seemore">Lihat Semua</a>
+</section>
+
+
+
+
+<section class="partcompany">
+    <h3>Bagian Dari Wika Group</h3>
+    <div class="groups">
+        <button class="prev2"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="group">
+            <img src="company/image/part1.png">
+            <img src="company/image/part2.png">
+            <img src="company/image/part3.png">
+            <img src="company/image/part4.png">
+            <img src="company/image/part5.png">
+            <img src="company/image/part6.png">
+            <img src="company/image/part7.png">
+            <img src="company/image/part8.png">
+            <img src="company/image/part9.png">
+        </div>
+
+        <button class="next2"><i class="fas fa-chevron-right"></i></button>
     </div>
 </section>

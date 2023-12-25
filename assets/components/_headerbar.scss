@@ -1,0 +1,112 @@
+.header-bar {
+    transition: all 200ms ease 0s;
+    position: fixed;
+    left:0; 
+    right: 0;
+    z-index: 10;
+    @include myflex(space-between, center, unset); 
+    padding:25px $indents_parent;
+    height: 40px;
+    background: transparent;
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color:white; 
+        opacity: 0;
+        pointer-events: none;
+        transition: all 200ms ease 0s; 
+    }
+    ul {
+        @include myflex(unset,center,unset, 20px);    
+    }
+    li {
+        position: relative;
+        * {
+            color:$primary; 
+            text-decoration: none;
+        }
+    }
+    li:first-child::after {
+        @include myafter(white); 
+        @include mywidth(1px, 100%); 
+        @include myposition(0,-10px); 
+    }
+    .sitemap {
+        cursor: pointer;
+        @include myflex(); 
+        gap: 10px; 
+        .box {
+            right: -26px;
+            position: absolute;
+            background:$primary;
+            border-radius: 50%;
+            @include myflex(); 
+            @include mywidth(20px,20px); 
+            span {
+                margin-top: -2px;
+                color:white;
+            } span.active {
+                color: $primary; 
+            }
+            transition: all 500ms ease 0s;
+        }
+        .box.rotate {
+            transform: rotate(180deg);
+        }
+
+        .box.active {
+            background:white; 
+        }
+    }
+}
+
+
+.menu-overlay.show {
+    top: 0;
+    opacity: 1;
+}
+
+.menu-overlay {
+    padding-top: 50px;
+    z-index: 5;
+    background:$primary;
+    position: fixed;
+    top: -9999%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+    @include mywidth(100%, 100vh);
+    
+    .icon::after {
+        @include myafter(white); 
+        width: 100%; 
+        height: 1px; 
+        left: 0;
+        transform: translateY(12px);
+    }
+    // Scroll Bar Hidden
+    &-all::-webkit-scrollbar { display: none;}
+    &-all {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+        overflow: auto;
+        margin: 20px $indents_parent;
+        height: 100vh;
+        .sub-menu {
+        
+            color:white; 
+            h1 {@include myfont(22px, bold);} 
+            .sub-link {
+                margin: 10px 0;
+                @include myflex(flex-start,flex-start,column,10px);
+                a {color:white;display:inline-block;}
+                a:hover{text-decoration: underline;}
+            } ul {
+                margin: 15px 0;
+                @include myflex(flex-start,flex-start,column,5px);
+                a {color:rgb(233, 233, 233);} 
+                a:hover{text-decoration: underline;}
+            }
+        }
+    }
+}

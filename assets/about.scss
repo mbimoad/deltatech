@@ -1,0 +1,98 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/footer';
+
+
+.about-me.reverse {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+.about-me {
+    padding: 0 $indents_parent; 
+    margin-top: 200px;
+    @include myflex(space-between,center,unset);
+    &-info {
+        width: 800px;
+        h1 {
+            @include myfont(55px,bold);
+            margin-bottom: 20px;
+        } .paragraphs {
+            @include myflex(unset,unset,column,20px);
+            p {
+                line-height: 1.5;
+                text-align: justify
+            }
+            
+            @include myfont(18px);
+        }
+    } img {
+        width: 314px; 
+        height: 354px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+.business-lines {
+    margin-top: 80px;
+    background: #f7f7f7; 
+    padding: 40px $indents_parent; 
+    &-title {
+        text-align: center;
+
+        width: 750px;
+        margin: auto;
+        h1 {
+            @include myfont(40px,bold);
+        } p {
+            @include myfont(18px);
+            line-height: 2;
+        }
+    }
+}
+
+.business-line {
+    margin-top: 50px;
+    @include myflex(unset,unset,unset,20px);
+    .box {
+        @include myflex(unset,unset,column,20px);
+        .icon::before {
+            @include myafter(#333); 
+            left: 0;
+            right: 0;
+            height: 1px;
+        }
+        .icon {
+            position: relative;
+            i {
+                background: #f7f7f7;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                border: 1px solid;
+                @include myflex();
+                transition: all 200ms ease 0s; 
+                cursor: pointer;
+            } i.animate {
+                transform: scale(1.2);
+            }
+            @include myflex(flex-end);
+        } p {
+            line-height: 1.5;
+        } h3 {
+            @include myfont(20px, bold);
+        } p.animate,h3.animate {
+            color:#0a4f9d;
+        } p,h3 {
+            transition: all 200ms ease 0s;
+        }
+    }
+}

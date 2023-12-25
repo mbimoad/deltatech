@@ -1,0 +1,128 @@
+.main {
+    width:100%;
+    height:700px;
+    margin: 0 auto;
+    position: relative;
+    .container {
+
+        .learn-more:hover {
+            p {
+                transform: rotate(-90deg) translateX(70px);
+            }
+        }
+        .learn-more {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            bottom: 0; 
+            * {color:white;}
+            @include myflex(center,center,column,20px);
+            p {
+                transition: all 200ms ease 0s;
+                transform: rotate(-90deg) translateX(50px);
+                @include myfont(14px);
+                
+            }
+            .line {
+                height: 30px;
+                width: 2px; 
+                background:white; 
+            }
+        } .ruangberita {
+            z-index: 10;
+            cursor: pointer;
+            transition: all 200ms ease 0s;
+            border-radius: 4px;
+            position: fixed;
+            right: -115px;
+            background: #0a4f9d;
+            color:white; 
+            @include myflex(center, center, unset, 20px); 
+            padding: 10px 15px;
+            h4 {
+                @include myfont(18px, bold);
+            }
+        } .ruangberita:hover {
+            right: 0;
+        }
+        padding: 0 $indents_parent; 
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background:rgba(61, 61, 61, 0.404); 
+        @include myflex(center, unset, column, 30px);
+        .carousel-btn {
+            color:white; 
+            @include myflex(flex-start, center, unset, 12px);
+            i {cursor: pointer;}
+            z-index: 3;
+        }
+      
+        .detail {
+            z-index: 3;
+            width: 60%;
+            @include myflex(unset, unset, column, 40px);
+            h1 {
+                @include myfont(50px, bold);
+                color:white; 
+            } p {
+                @include myfont(19px, bold);
+                color:white; 
+            } a {
+                @include myfont(19px, bold);
+                color:white; 
+                display: inline-block;
+                padding: 20px 30px; 
+                border: 2px solid white;
+                border-radius:5px;
+                align-self: flex-start;
+            }
+        }
+    }
+    .slider-outer::before {
+        @include myafter(unset); 
+        width: 100%; 
+        height: 250px;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.822), rgba(255, 255, 255, 0.548), rgba(255, 255, 255, 0));
+    }
+    .slider-outer{
+        height:100% !important; 
+        overflow:hidden;
+        .slider{ 
+            width: 100%;
+            height: 100%;
+            .slide-item {
+                float:left;
+                padding: 0;
+                margin: 0;
+                video {
+                    min-width: 100%; min-height: 100vh;
+                }
+        
+                .slide-image{
+                    width: 100%;
+                    height: 100%;
+                    display:block;
+                    color: transparent;
+                    background-size: cover;
+                    -moz-background-size: cover;
+                    -ms-background-size: cover;
+                    -o-background-size: cover;
+                    -webkit-background-size: cover;
+                    background-position: 50% 50%;
+                    background-repeat: none;
+                }
+            }
+        }
+    }   
+}  
+
+.clear {
+    clear:both;
+}
+

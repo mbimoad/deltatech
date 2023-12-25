@@ -1,0 +1,137 @@
+.navbar {
+    transition: all 200ms ease 0s;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    top: 50px;
+
+    @include myflex(center, center, unset, 20px);
+    padding: 15px 0; 
+    img {width: 80px;}
+    * {color: $primary}
+    ul {
+        @include myflex(center, center, unset, 40px);
+        .arrow-menu {
+            position: relative;
+            .main-menu {
+                .title {@include myfont(20px, bold);}
+                .fa-sort-up   {display: none;}
+                .fa-sort-down {display: unset;}
+            }
+            .hiddenel1 {
+                position: absolute;
+                @include mywidth(180px, 30px);
+                background:transparent; 
+                bottom: -30px;
+                z-index: 2;
+                display: none;
+            }
+            .submenu1 {
+                z-index: 2;
+                top: 55px;
+                width: 180px; 
+                padding: 20px 10px;
+                position: absolute;
+                @include myflex(space-evenly,unset, column, 30px);
+                box-shadow: 0px 0px 4px 0 #eee;
+                background:white; 
+                display: none;
+                .sub-title {
+                    @include myfont(18px, unset);
+                    cursor: pointer;
+                } i {
+                    font-size: 12px;
+                    margin-bottom: -4px;
+                } .arrow-menu {
+                    .main-menu {@include myflex(space-between, center);}
+                    .hiddenel2 {
+                        position: absolute;
+                        width: 27px;
+                        height: 100px;
+                        background: transparent;
+                        top: -2px;
+                        right: -27px;
+                        z-index: 2;
+                        display: none;
+                    } .submenu2 {
+                        right: -200px;
+                        top: 0px;
+                        width: 180px; 
+                        padding: 20px 10px;
+                        position: absolute;
+                        @include myflex(space-evenly,unset, column, 30px);
+                        box-shadow: 0px 0px 4px 0 #eee;
+                        background:white; 
+                        display: none;
+                        .sub-title {
+                            @include myfont(18px, unset);
+                            cursor: pointer;
+                        } i {
+                            font-size: 12px;
+                            margin-bottom: -4px;
+                        } .arrow-menu {
+                            .main-menu {@include myflex(space-between, center);}
+                        }
+                    }
+                }
+            }
+        }
+
+        // Search Overlay
+        .fa-search {
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-overlay {
+            @include myposition(10px, 0, unset, 0); 
+            @include myflex(center,center,column, 20px);
+            position: absolute;
+            padding: 40px 0; 
+            background: white;
+            display: none;
+            strong {font-weight: bold;}
+            * {
+                color:black;
+            }
+            .close {
+                position: absolute;
+                @include myposition(40px, 95px, unset, unset); 
+                font-size: 25px;
+                cursor: pointer;
+            } h1 {
+                font-size: 25px;
+            } h3 {
+                font-size: 18px;
+            }.input-group {
+                position: relative;
+                .fa-search {
+                    position: absolute;
+                    top: 13px;
+                    left: 12px;
+                } input {
+                    padding: 10px 10px 10px 40px;
+                    border: 1px solid #ccc;
+                } input[type=text]:focus {
+                    border: 1px solid $primary;
+                    outline: none;
+                } 
+            }
+            .keywords {
+                @include myflex(unset, unset, unset, 10px); 
+                .keyword {
+                    padding: 10px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+.navbar.active {
+    background:white; 
+    box-shadow: 0px 0px 6px #ddd;
+    padding: 20px 0;
+    top: 0;
+}

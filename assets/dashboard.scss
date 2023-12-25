@@ -1,0 +1,211 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/footer';
+
+.whowe {
+    padding: 60px $indents_parent; 
+    .detail {
+        margin: auto;
+        width: 55%;
+        text-align: center;
+        h1 {
+            @include myfont(40px, bold); 
+            color:#0a4f9d;
+        } h5 {
+            margin: 20px 0; 
+            @include myfont(18px, unset); 
+        } a {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid $primary;
+            border-radius: 5px;
+            @include myfont(18px, unset); 
+            color:$primary;
+        }
+    }
+
+    &-cards {
+        margin-top: 50px;
+        @include myflex(space-evenly, center, unset);
+
+        .card {
+            border-radius: 8px;
+            padding: 10px 15px;
+            background: #0a4f9d; 
+            @include myflex(space-evenly,center, unset, 10px);
+            i {
+                font-size: 70px;
+                color:$primary; 
+            } &-detail {
+                color:white; 
+                h5 {
+                    @include myfont(20px, bold);
+                } h1 {
+                    @include myfont(30px, bold);
+                }
+            }
+        }
+    }
+}
+
+
+
+.services {
+    &-title {
+        position: absolute;
+        top: 70px;
+        margin: auto;
+        @include myfont(40px, unset);
+        color:white; 
+        z-index: 9;
+        pointer-events: none;
+        strong {font-weight: bold;}
+    }
+    position: relative;
+    background-image: url('../company/image/bg3.jpg');
+    background-size: cover;
+    height: 600px;
+    @include myflex(space-evenly,unset,unset);
+    .overlay {
+        position: absolute;
+        background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.397), black);
+        @include myposition(0,0,0,0);
+        pointer-events: none;
+    }
+    .service:hover {
+        background-color: #0a4f9dda;
+        .icon {
+            transform: translate(0, 0);
+        } .detail {
+            transform: translate(0, 0);
+            opacity: 1;
+
+        }
+    }
+    .service {
+        transition: all 500ms ease 0s;
+        border-right: 2px solid rgba(255, 255, 255, 0.637);
+        flex: 1; 
+        padding: 30px;
+        @include myflex(space-evenly,center, column);
+        text-align: center;
+        * {color:white;}
+        .icon {
+            transition: all 200ms ease 0s;
+            transform: translate(0, 100px);
+            i  {font-size: 60px;} 
+            h1 {@include myfont(30px, bold);}
+        } .detail {
+            transition: all 200ms ease 100ms;
+            transform: translate(0, 30px);
+            opacity: 0;
+            p {
+                -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                scrollbar-width: none;  /* Firefox */
+                margin-bottom: 15px;
+                height: 80px; 
+                overflow: auto
+            } 
+            p::-webkit-scrollbar { display: none;}
+            a {
+                @include myfont(20px, bold);
+                padding: 5px 0;
+                border-bottom: 2px solid rgb(247, 247, 247);
+            }
+        }
+    } .service:last-child {
+        border-right: unset;
+    }
+}
+
+
+
+.projects {
+    margin-bottom: 20px;
+    padding: 30px $indents_parent;
+    @include myflex(unset, unset,unset, 30px); 
+    .layer1 {
+        @include myflex(center, unset, column, 20px); 
+        button {
+            border: 2px solid #0a4f9d;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            color: #333;
+        }
+    } .layer2 {
+        overflow-x: hidden;
+        overflow-y: unset;
+        width: 1200px;
+        height: 380px;
+        @include myflex(unset, unset,unset, 30px); 
+
+        .project {
+            transition: all 500ms ease 0s;
+            flex: 0 0 360px;
+            transform: translate(-360px, 0);
+            height: 250px;
+            border-radius: 4px;
+            position: relative;
+            &-detail {
+                @include myflex(unset, flex-start,unset, 10px); 
+                position: absolute;
+                bottom: -40px;
+                padding: 10px 10px;
+                height: 80px;
+                background:#eee;
+                border-bottom: 2px solid #aaa;
+            } &-description {
+                background:#eee;
+                width: 80%;
+                position: absolute;
+                bottom: -120px;
+                right: 0;
+                padding: 10px;
+                h2 {
+                    @include myfont(20px, bold);
+                    margin-bottom: 5px;
+                } p {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.partcompany {
+    margin-top: 70px;
+    h3 {
+        @include myfont(18px,bold);
+        text-align: center;
+        margin-bottom: 20px;
+    } .groups {
+        @include myflex(center,center,unset,10px);
+        button {
+            background:unset;
+            border:unset; 
+            outline: none;
+        } 
+        .group {
+            width: 1191px;
+            overflow: hidden;
+            @include myflex(unset,unset,unset,10px); 
+            
+            img {
+                width: 163px;
+                transform: translate(-163px,0);
+            }
+        }
+    }
+}
+
+

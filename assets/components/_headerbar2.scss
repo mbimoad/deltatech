@@ -1,0 +1,35 @@
+.header-bar {
+    background: $primary;
+    li {
+        * {
+            color:white; 
+        }
+    }
+    li:first-child::after {
+        @include myafter(white); 
+        @include mywidth(1px, 100%); 
+        @include myposition(0,-10px); 
+    }
+    .sitemap {
+        .box {
+            background:white;
+            span {color:$primary;}
+        }
+    }
+}
+
+
+.menu-overlay.show {
+    top: 0;
+    opacity: 1;
+}
+
+.menu-overlay {
+    
+    .icon {
+        h3 {
+            color:white; 
+        }
+    } 
+    
+}

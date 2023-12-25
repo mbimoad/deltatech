@@ -1,24 +1,26 @@
-<ul class="header-bar">
-    <li>
-        <a href="#">
-            Hubungi Kami
-        </a>
-    </li>
-    <li class="sitemap">
-        <span>Sitemap</span>
-        <div class="box">
-            <span>+</span>
-        </div>
-    </li>
-</ul>
+<div class="header-bar">
+    <h3>Sitemap</h3>
+    <ul>    
+        <li>
+            <a href="#">
+                Hubungi Kami
+            </a>
+        </li>
+        <li class="sitemap">
+            <span>Sitemap</span>
+            <div class="box">
+                <span>+</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
 
 
 
 <section class="menu-overlay">
-    <div class="icon">
-        <h3>Sitemap</h3>
-    </div>
-
+    
     <div class="menu-overlay-all">
         <div class="sub-menu">
             <h1>Info Perusahaan</h1>
@@ -101,6 +103,87 @@
 
     <!-- MENU -->
     <ul>
+        <li class="arrow-menu main-arrow">
+            <!-- Main Menu -->
+            <div class="hiddenel1"></div>
+            <div class="main-menu">
+                <span class="title">Info Perusahaan</span>
+                <i class="fas fa-sort-down"></i>
+                <i class="fas fa-sort-up"></i>
+            </div>
+            <ul class="submenu1">
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                <li class="arrow-menu second-arrow">
+                    <div class="main-menu">
+                        <span class="sub-title">Info Perusahaan</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="hiddenel2"></div>
+                    <ul class="submenu2">
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                    </ul>
+                </li>
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+            </ul>
+        </li>
+
+        <li class="arrow-menu main-arrow">
+            <!-- Main Menu -->
+            <div class="hiddenel1"></div>
+            <div class="main-menu">
+                <span class="title">Info Perusahaan</span>
+                <i class="fas fa-sort-down"></i>
+                <i class="fas fa-sort-up"></i>
+            </div>
+            <ul class="submenu1">
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                <li class="arrow-menu second-arrow">
+                    <div class="main-menu">
+                        <span class="sub-title">Info Perusahaan</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="hiddenel2"></div>
+                    <ul class="submenu2">
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                    </ul>
+                </li>
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+            </ul>
+        </li>
+
+        <li class="arrow-menu main-arrow">
+            <!-- Main Menu -->
+            <div class="hiddenel1"></div>
+            <div class="main-menu">
+                <span class="title">Info Perusahaan</span>
+                <i class="fas fa-sort-down"></i>
+                <i class="fas fa-sort-up"></i>
+            </div>
+            <ul class="submenu1">
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                <li class="arrow-menu second-arrow">
+                    <div class="main-menu">
+                        <span class="sub-title">Info Perusahaan</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="hiddenel2"></div>
+                    <ul class="submenu2">
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                        <li class="sub-title"><a href="#">Siapa Kami</a></li>
+                    </ul>
+                </li>
+                <li class="sub-title"><a href="#">Siapa Kami</a></li>
+            </ul>
+        </li>
+
         <li class="arrow-menu main-arrow">
             <!-- Main Menu -->
             <div class="hiddenel1"></div>
