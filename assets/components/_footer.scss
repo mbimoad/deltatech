@@ -11,6 +11,7 @@ footer {
         .footer-menu {
             @include myflex(space-between, center, unset); 
             a {
+                color: white;
                 padding: 0 20px;
             } a:first-child, a:nth-child(2) {
                 border-right: 1px solid white;
@@ -23,6 +24,9 @@ footer {
         height: 1px;
     }
     .icon-addr {
+        a {
+            color:white;
+        }
         padding: 0 $indents_parent 20px; 
         position: relative;
         margin-top: 40px;

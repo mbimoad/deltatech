@@ -1,5 +1,5 @@
-<section class="about-me">
-    <div class="about-me-info">
+<section class="twolayer">
+    <div class="twolayer-info">
         <h1>Who We Are</h1>
         <div class="paragraphs">
             <p>In accordance with Republic of Indonesia Government Regulation No. 64 of 1961, WIKA was established with the aim of contributing to the development of the national economy in compliance with a directed economy. Starting with business activities which only included electrical and water pipe installation work when it was founded, in the 1970s WIKA turned into a civil and building contractor company.</p>
@@ -8,21 +8,25 @@
         </div>
     </div>
 
-    <img src="company/image/whoimg.jpg" >
+    <div class="twolayer-img">
+        <img src="company/image/commitmen.jpg" class="float-img">
+        <img src="company/image/whoimg.jpg">
+    </div>
+    
 </section>
 
 
-<section class="about-me reverse">
-
-    <div class="about-me-info">
+<section class="twolayer reverse">
+    <div class="twolayer-info">
         <div class="paragraphs">
             <p>In accordance with Republic of Indonesia Government Regulation No. 64 of 1961, WIKA was established with the aim of contributing to the development of the national economy in compliance with a directed economy. Starting with business activities which only included electrical and water pipe installation work when it was founded, in the 1970s WIKA turned into a civil and building contractor company.</p>
             <p>Through Initial Public Offering (IPO) in the Indonesia Stock Exchange on 27 October 2007, WIKA released 28.46 percent of its shares to the public, while the Government of the Republic of Indonesia owns the rest. The funds received from the IPO has helped WIKA to be more flexible in its growth and development.</p>
             <p>The Company continues to take various anticipative and innovative measures to help its development, resulting in its strong position amidst national and global crisis.</p>
         </div>
     </div>
-
-    <img src="company/image/whoimg.jpg" >
+    <div class="twolayer-img">
+        <img src="company/image/whoimg.jpg" >
+    </div>
 </section>
 
 

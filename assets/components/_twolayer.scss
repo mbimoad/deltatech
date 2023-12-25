@@ -1,0 +1,60 @@
+.twolayer.reverse {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+.twolayer {
+    padding: 0 $indents_parent; 
+    margin-top: 200px;
+    @include myflex(space-between,center,unset);
+    &-info {
+        width: 800px;
+        h1 {
+            @include myfont(55px,bold);
+            margin-bottom: 20px;
+        } .paragraphs {
+            @include myflex(unset,unset,column,20px);
+            p {
+                line-height: 1.5;
+                text-align: justify;
+            } p.boxshadow {
+                padding: 10px; 
+                box-shadow: 0 0 10px 0 #eee; 
+            }
+            
+            @include myfont(18px);
+        } .scroll {
+            padding-right: 20px;
+            height: 300px;
+            overflow: auto;
+        } .scroll::-webkit-scrollbar {
+            width: 7px;
+          }
+          
+          /* Track */
+          .scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+          }
+           
+          /* Handle */
+          .scroll::-webkit-scrollbar-thumb {
+            background:#0a4f9d; 
+          }
+    } .twolayer-img {
+        position: relative;
+        img {
+            width: 314px; 
+            height: 354px;
+            object-fit: cover;
+            border-radius: 5px;
+        } .float-img {
+            width: 234px; 
+            height: 260px;
+            position: absolute;
+            bottom: 40px;        
+        } .img-left {
+            left: -50px;
+        } .img-right {
+            right: -50px;
+        }
+    }
+}

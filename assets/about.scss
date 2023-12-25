@@ -5,38 +5,11 @@
 @import 'components/navbar2';
 @import 'components/hero';
 @import 'components/news';
+@import 'components/twolayer';
 @import 'components/footer';
 
 
-.about-me.reverse {
-    flex-direction: row-reverse;
-    margin-top: 50px;
-}
-.about-me {
-    padding: 0 $indents_parent; 
-    margin-top: 200px;
-    @include myflex(space-between,center,unset);
-    &-info {
-        width: 800px;
-        h1 {
-            @include myfont(55px,bold);
-            margin-bottom: 20px;
-        } .paragraphs {
-            @include myflex(unset,unset,column,20px);
-            p {
-                line-height: 1.5;
-                text-align: justify
-            }
-            
-            @include myfont(18px);
-        }
-    } img {
-        width: 314px; 
-        height: 354px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-}
+
 
 .business-lines {
     margin-top: 80px;

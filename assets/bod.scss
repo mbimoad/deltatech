@@ -1,0 +1,66 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/twolayer';
+@import 'components/footer';
+
+
+.bod-menu {
+    margin-top: 140px;
+    @include myflex(center, center, unset, 10px);
+    a {
+        padding: 5px 10px;
+        @include myfont(18px,unset);
+        color:#0a4f9d;
+        transition: all 200ms ease 0s;
+    } a.active {
+        font-weight: bold;
+    } span {
+        color:#eee;
+    }
+}
+
+.carousel {
+    margin-top:30px;
+    height: 500px !important;
+    .carousel-item {
+        width: 300px !important;
+        height: auto !important;
+        img {
+            border-radius: 25px !important;
+        }
+    }
+}
+
+.bod-info {
+    margin: auto;
+    text-align: center;
+    h3 {
+        @include myfont(40px, bold); 
+        color:#0a4f9d;
+        margin: unset
+    } p {
+        @include myfont(20px); 
+        margin-top: 10px;
+    } .menu-button {
+        margin-top: 30px;
+        @include myflex(center,center,unset,20px);
+        button {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            outline: none;
+            border:unset; 
+            border:1px solid #0a4f9d;
+            background-color: white;
+        } button:hover {
+            background-color: #0a4f9d;
+            color:white; 
+        }
+    }
+}

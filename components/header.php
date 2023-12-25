@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo $style; ?>">
   </head>
   <body>
-    <div class="container">
+    <div class="cont">
     
 
     

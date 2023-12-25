@@ -1,11 +1,8 @@
 <?php
-$halaman = isset($_GET['halaman']) ? $_GET['halaman'] : 'dashboard'; 
+$halaman = isset($_GET['halaman']) ? $_GET['halaman'] : 'bod'; 
 switch($halaman):
-    case 'dashboard':
-        $judul = "dashboard";
-    break;
-    case 'about': 
-        $judul = "about";
+    case $halaman: 
+        $judul = $halaman;
     break;
 endswitch; 
 

@@ -1181,101 +1181,8 @@ footer .icon-addr .icon {
   gap: 10px;
 }
 
-.business-lines {
-  margin-top: 80px;
-  background: #f7f7f7;
-  padding: 40px 60px;
-}
-
-.business-lines-title {
-  text-align: center;
-  width: 750px;
-  margin: auto;
-}
-
-.business-lines-title h1 {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.business-lines-title p {
-  font-size: 18px;
-  font-weight: unset;
-  line-height: 2;
-}
-
-.business-line {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-      -ms-flex-direction: unset;
-          flex-direction: unset;
-  gap: 20px;
-}
-
-.business-line .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 20px;
-}
-
-.business-line .box .icon::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: #333;
-  left: 0;
-  right: 0;
-  height: 1px;
-}
-
-.business-line .box .icon {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-      -ms-flex-direction: unset;
-          flex-direction: unset;
-  gap: unset;
-}
-
-.business-line .box .icon i {
-  background: #f7f7f7;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  border: 1px solid;
+.bod-menu {
+  margin-top: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1289,32 +1196,89 @@ footer .icon-addr .icon {
   -webkit-box-direction: unset;
       -ms-flex-direction: unset;
           flex-direction: unset;
-  gap: unset;
+  gap: 10px;
+}
+
+.bod-menu a {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: unset;
+  color: #0a4f9d;
   -webkit-transition: all 200ms ease 0s;
   transition: all 200ms ease 0s;
-  cursor: pointer;
 }
 
-.business-line .box .icon i.animate {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.business-line .box p {
-  line-height: 1.5;
-}
-
-.business-line .box h3 {
-  font-size: 20px;
+.bod-menu a.active {
   font-weight: bold;
 }
 
-.business-line .box p.animate, .business-line .box h3.animate {
-  color: #0a4f9d;
+.bod-menu span {
+  color: #eee;
 }
 
-.business-line .box p, .business-line .box h3 {
-  -webkit-transition: all 200ms ease 0s;
-  transition: all 200ms ease 0s;
+.carousel {
+  margin-top: 30px;
+  height: 500px !important;
 }
-/*# sourceMappingURL=about.css.map */
+
+.carousel .carousel-item {
+  width: 300px !important;
+  height: auto !important;
+}
+
+.carousel .carousel-item img {
+  border-radius: 25px !important;
+}
+
+.bod-info {
+  margin: auto;
+  text-align: center;
+}
+
+.bod-info h3 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0a4f9d;
+  margin: unset;
+}
+
+.bod-info p {
+  font-size: 20px;
+  font-weight: unset;
+  margin-top: 10px;
+}
+
+.bod-info .menu-button {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+      -ms-flex-direction: unset;
+          flex-direction: unset;
+  gap: 20px;
+}
+
+.bod-info .menu-button button {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  outline: none;
+  border: unset;
+  border: 1px solid #0a4f9d;
+  background-color: white;
+}
+
+.bod-info .menu-button button:hover {
+  background-color: #0a4f9d;
+  color: white;
+}
+/*# sourceMappingURL=bod.css.map */

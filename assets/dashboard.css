@@ -13,7 +13,7 @@
   background-size: cover;
 }
 
-.container {
+.cont {
   position: relative;
   margin: auto;
   max-width: 1920px;
@@ -941,6 +941,7 @@ footer .footer-menus .footer-menu {
 }
 
 footer .footer-menus .footer-menu a {
+  color: white;
   padding: 0 20px;
 }
 
@@ -978,6 +979,10 @@ footer .icon-addr {
       -ms-flex-direction: unset;
           flex-direction: unset;
   gap: unset;
+}
+
+footer .icon-addr a {
+  color: white;
 }
 
 footer .icon-addr .addr {
