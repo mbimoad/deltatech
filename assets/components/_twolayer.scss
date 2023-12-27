@@ -2,23 +2,59 @@
     flex-direction: row-reverse;
     margin-top: 50px;
 }
+
+
+.twolayer.mt-1 {
+    margin-top: 50px;
+}
+.twolayer.mt-2 {
+    margin-top: 100px;
+}
 .twolayer {
     padding: 0 $indents_parent; 
     margin-top: 200px;
     @include myflex(space-between,center,unset);
     &-info {
         width: 800px;
+        h5 {
+            @include myfont(20px, bold);
+        }
         h1 {
             @include myfont(55px,bold);
-            margin-bottom: 20px;
-        } .paragraphs {
+            margin-bottom: 20px;            
+        } 
+        
+        .paragraphs::-webkit-scrollbar {
+            width: 7px;
+          }
+          
+          /* Track */
+          .paragraphs::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+          }
+           
+          /* Handle */
+          .paragraphs::-webkit-scrollbar-thumb {
+            background:#0a4f9d; 
+          }
+        .paragraphs {
+            height: 300px;
+            overflow: auto;
+            padding-right: 20px;
             @include myflex(unset,unset,column,20px);
-            p {
-                line-height: 1.5;
-                text-align: justify;
-            } p.boxshadow {
-                padding: 10px; 
-                box-shadow: 0 0 10px 0 #eee; 
+            .paragraph {
+                
+                i {
+                    transform: translate(0,5px);
+                }
+                @include myflex(flex-start,flex-start,unset,20px);
+                p {
+                    line-height: 1.5;
+                    text-align: justify;
+                } p.boxshadow {
+                    padding: 10px; 
+                    box-shadow: 0 0 10px 0 #eee; 
+                }
             }
             
             @include myfont(18px);
@@ -58,3 +94,60 @@
         }
     }
 }
+
+
+.ball.ball-reverse::before {
+    @include myposition(-70px,-70px,unset,unset);
+} .ball.ball-reverse::after {
+    @include myposition(unset,unset,-200px,-200px);
+}
+
+.ball::before {
+    @include myafter(#0c5bb6);
+    width:300px; 
+    height:300px;
+    position: absolute;
+    @include myposition(-200px,0,0,-200px);
+    z-index: -1;
+    border-radius: 50%;
+} .ball::after {
+    @include myafter(#0c5bb6);
+    width:500px; 
+    height:500px;
+    position: absolute;
+    @include myposition(unset,-70px,-70px,unset);
+    z-index: -1;
+    border-radius: 50%;
+} 
+
+.ball {
+    position: relative;
+    z-index: 1;
+}
+
+
+.twolayer.secondary {
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    background: $secondary;
+    padding: 100px $indents_parent;
+    * {color:white;}
+    
+
+    .twolayer-info {
+        width: 720px;
+        h1 {
+            @include myfont(40px,bold);
+        }
+    } .twolayer-img {
+        img {
+            width: 420px; 
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+}
+
+

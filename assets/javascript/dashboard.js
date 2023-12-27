@@ -1,9 +1,6 @@
-
-
-var slideCount = document.querySelectorAll('.slider .slide-item').length;
-var slideWidth = document.querySelectorAll('.slider-outer')[0].offsetWidth;
-var slideHeight = document.querySelectorAll(".slider-outer")[0].offsetHeight;
-
+var slideCount    = document.querySelectorAll('.slider .slide-item').length;
+var slideWidth    = document.querySelectorAll('.slider-outer')[0].offsetWidth;
+var slideHeight   = document.querySelectorAll(".slider-outer")[0].offsetHeight;
 var sliderUlWidth = slideCount * slideWidth;
 document.querySelectorAll('.slider')[0].style.cssText = "width:" + sliderUlWidth + "px";
 

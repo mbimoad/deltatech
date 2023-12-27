@@ -2,7 +2,9 @@
     <div class="twolayer-info">
         <h1>Commitment</h1>
         <div class="paragraphs">
-            <p>The continuous growth, which PT Wijaya Karya (Persero) Tbk. (WIKA) has established for more than fifty years, is a success story that reflects the towering commitment and hard work of its workforce. Entering the 21st century, WIKA strives to advance its performance in every aspect, starting from the Management, Human Resources, to more highly structured innovation and technology.</p>
+            <div class="paragraph">
+                <p>The continuous growth, which PT Wijaya Karya (Persero) Tbk. (WIKA) has established for more than fifty years, is a success story that reflects the towering commitment and hard work of its workforce. Entering the 21st century, WIKA strives to advance its performance in every aspect, starting from the Management, Human Resources, to more highly structured innovation and technology.</p>
+            </div>
         </div>
     </div>
 
@@ -28,12 +30,14 @@
     <div class="twolayer-info">
         <h1>Mission - 2030</h1>
         <div class="paragraphs scroll">
-            <p class="boxshadow">Deliver integrated & sustainable EPC services and products based on excellent Quality, Safety, Health & Environment principles</p>
-            <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
-            <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
-            <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
-            <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
-            <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+            <div class="paragraph">
+                <p class="boxshadow">Deliver integrated & sustainable EPC services and products based on excellent Quality, Safety, Health & Environment principles</p>
+                <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+                <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+                <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+                <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+                <p class="boxshadow">Ensure sustainable growth through smart investment portfolio</p>
+            </div>
         </div>
     </div>
 

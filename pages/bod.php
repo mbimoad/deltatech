@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<div class="bod-menu">
+<div class="management-menu">
     <a href="#">BOARD OF COMISSIONERS</a>
     <span>|</span>
     <a class="active" href="#">BOARD OF DIRECTORS</a>
@@ -10,11 +10,11 @@
 
 
 <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="company/image/human1.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="company/image/human2.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="company/image/human3.jpg"></a>
-    <a class="carousel-item" href="#four!"><img src="company/image/human4.jpg"></a>
-    <a class="carousel-item" href="#five!"><img src="company/image/human5.jpg"></a>
+    <a class="carousel-item" href="pages/profile.php?halaman=0"><img src="company/image/human1.jpg"></a>
+    <a class="carousel-item" href="pages/profile.php?halaman=1"><img src="company/image/human2.jpg"></a>
+    <a class="carousel-item" href="pages/profile.php?halaman=2"><img src="company/image/human3.jpg"></a>
+    <a class="carousel-item" href="pages/profile.php?halaman=3"><img src="company/image/human4.jpg"></a>
+    <a class="carousel-item" href="pages/profile.php?halaman=4"><img src="company/image/human5.jpg"></a>
 </div>
 
 

@@ -4,7 +4,15 @@
     align-items: $align;
     flex-direction: $direction;
     gap: $gap; 
-    
+}
+
+@mixin centerabsolute() {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@mixin myflexwidth($width) {
+    flex: 0 0 $width;
 }
 
 @mixin mywidth($xwidth, $xheight) {

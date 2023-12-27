@@ -1,0 +1,54 @@
+.toggle-boxs {
+    margin-top: 40px;
+    .toggle-box.active {
+        background:white;
+        .toggle-description {
+            display: none;
+        } .toggle-header {
+            i {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+    .toggle-box:last-child {
+        border-bottom: 1px double #333;
+    }
+    .toggle-box {
+        background:#eee;
+        padding: 40px $indents_parent;
+        border-top: 1px double #333;
+        .toggle-header {
+            @include myflex(space-between,center);
+            h3 {
+                @include myfont(22px, bold);
+            } i {
+                transform: rotate(90deg);
+                @include myfont(30px, bold);
+                color:$primary;
+            }
+        } .toggle-description {
+            margin-top: 30px;
+            @include myflex(unset,unset,column,20px);
+            p {
+                @include myfont(18px);
+                line-height: 1.5;
+            } table {
+                text-align: left;
+                border-collapse: collapse;
+                th:first-child {
+                    border-radius: 7px 0 0 0; 
+                } th:last-child {
+                    border-radius: 0 7px 0 0; 
+                }
+                th {
+                    background:#0a4f9d;
+                    color:white;     
+                } tr:nth-child(2n-1) {
+                    background:#eee; 
+                } td,th {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/management_menu';
+@import 'components/twolayer';
+@import 'components/togglebox';
+@import 'components/togglebox2';
+@import 'components/footer';
+
+
+.yelyel {
+    margin-top: 80px;
+    padding: 0 $indents_parent;
+    @include myflex(space-between,center,unset);
+    .layer1::before {
+        @include myafter($secondary);
+        height: 300px;
+        left: 0;
+        right: 0;
+        transform: translate(0,-100px);
+        z-index: -1;
+    }
+    .layer1 {
+        text-align: center;
+        h1 {
+            color:white; 
+            @include myfont(70px,bold);
+            span {
+                color:$primary;
+            }
+        }
+    }
+    .layer2 {
+        @include myflex(space-between,center,unset, 20px);
+        flex-wrap: wrap;
+        .card {
+            background: white;
+            @include myflexwidth(300px);
+            text-align:center;
+            padding: 40px 0;
+            box-shadow: 0 0 5px #999;
+            h1 {
+                @include myfont(25px,bold);
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+
+.operational {
+    margin-top:50px;
+    padding: 0 $indents_parent;
+    text-align: center;
+    h1 {
+        @include myfont(30px,bold);
+    }
+
+    &-cards {
+        margin-top: 50px;
+        h3 {
+            @include myfont(20px,bold);
+            margin: 10px 0;
+        } p {
+            @include myfont(18px);
+            line-height: 1.5;
+        }
+        @include myflex(space-evenly,center,unset,40px);
+    }
+}

@@ -1,0 +1,39 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/twolayer';
+@import 'components/footer';
+
+
+.history {
+    margin-top: 130px;
+    @include myflex(space-evenly, flex-start,unset);
+    h5 {
+        cursor: pointer;
+        text-align: center;
+        flex:1;
+        position: relative;
+        padding-top: 25px;
+        @include myfont(19px);
+        text-transform: uppercase;
+        color:#aaa;
+        border-top: 4px solid $secondary;
+    } h5::before {
+        @include myafter(#ddd); 
+        width: 2px;
+        height: 15px;
+        top: 0;
+        left: 50%;
+        right: 0;
+    } h5.active {
+        color:$secondary;
+        @include myfont(24px, bold);
+    } h5.active::before {
+        @include myafter($secondary);
+        width: 3px;
+    }
+}

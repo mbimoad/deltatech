@@ -7,22 +7,8 @@
 @import 'components/news';
 @import 'components/twolayer';
 @import 'components/footer';
+@import 'components/management_menu';
 
-
-.bod-menu {
-    margin-top: 140px;
-    @include myflex(center, center, unset, 10px);
-    a {
-        padding: 5px 10px;
-        @include myfont(18px,unset);
-        color:#0a4f9d;
-        transition: all 200ms ease 0s;
-    } a.active {
-        font-weight: bold;
-    } span {
-        color:#eee;
-    }
-}
 
 .carousel {
     margin-top:30px;

@@ -1,0 +1,30 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/management_menu';
+@import 'components/togglebox';
+@import 'components/togglebox2';
+@import 'components/footer';
+
+
+
+.structure {
+    position: relative;
+    margin-top: 20px;
+    img {
+        width: 100%;
+    } 
+    .magnifier-preview {
+        object-fit: cover;
+        background-size: cover;
+        z-index: 1;
+        width: 450px;
+        height: 300px;
+        position: absolute;
+        @include myposition(0,20px,unset,unset);
+        border: 1px solid;
+
+    }
+}

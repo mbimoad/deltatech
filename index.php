@@ -1,5 +1,6 @@
 <?php
-$halaman = isset($_GET['halaman']) ? $_GET['halaman'] : 'bod'; 
+$halaman = isset($_GET['halaman']) ? $_GET['halaman'] : 'business-lines'; 
+
 switch($halaman):
     case $halaman: 
         $judul = $halaman;
@@ -7,6 +8,7 @@ switch($halaman):
 endswitch; 
 
 $style = "./assets/$judul.css"; 
+
 
 include "./components/header.php"; 
 include "./components/navbar.php"; 

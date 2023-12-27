@@ -1,0 +1,74 @@
+@import 'components/initialize';
+@import 'components/headerbar';
+@import 'components/headerbar2';
+@import 'components/navbar';
+@import 'components/navbar2';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/management_menu';
+@import 'components/footer';
+
+.bod-info2 {
+    @include myflex(unset,center,unset, 50px);
+    padding: 20px $indents_parent;
+    .layer1 {
+        img {
+            width: 400px; 
+        }
+    } .layer2 {
+        &-info {
+            @include myflex(space-between, flex-start);
+            h3 {
+                @include myfont(50px, bold); 
+                color:#0a4f9d;
+                margin: unset
+            } p {
+                @include myfont(20px); 
+                margin-top: 10px;
+            } .menu-button {
+                @include myflex(unset,unset,unset,15px);
+                button {
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    outline: none;
+                    border:unset; 
+                    border:1px solid #0a4f9d;
+                    background-color: white;
+                } button:hover {
+                    background-color: #0a4f9d;
+                    color:white; 
+                }
+            }
+        } 
+        &-description::before {
+            @include myafter(#eee); 
+            height: 100%;
+            transform: translate(0,-30px);
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        &-description {
+            
+            margin-top: 50px;
+            height: 300px;
+            overflow: auto;
+            @include myflex(unset,unset,column,20px);
+            p {
+                line-height: 2;
+            }
+        }
+
+        &-description::-webkit-scrollbar { display: none;}
+        &-description {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+
+    }
+}
+
